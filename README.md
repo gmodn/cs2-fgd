@@ -9,8 +9,9 @@ Currently Includes
 
 | Entity       | Condition      |
 | ----------- | ----------- | 
-| CT and T Spawns  | Fully Functional
-| Buy Zones  |  Fully Functional
-| Bomb Sites  |  Not Yet Tested
+| info_player_terrorist | Fully Functional
+| info_player_counterterrorist  | Fully Functional
+| func_buyzone  |  Fully Functional
+| func_bomb_target |  Not Yet Tested
 
 I will take feedback as I develop this.
