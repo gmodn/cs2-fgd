@@ -9,9 +9,10 @@
 @SolidClass base(Trigger)  = func_buyzone :
 	"Buy Zone for CS2"
 [
-	teamnum(choices) : "Team" : "0" =
+	teamnum(choices) : "Who can buy from here?" : "0" =
 	[
-		"1" : "Spectator"
+		"-1" : "No one"
+		"0" : "Everyone"
 		"2" : "Terrorist"
 		"3" : "Counter-Terrorist"
 	]
@@ -22,7 +23,7 @@
 [
 ]
 
-@SolidClass model("models/editor/playerstart.vmdl")
+@SolidClass model("models/player.vmdl")
 
 	metadata
 	{
@@ -36,7 +37,7 @@ base(info_player_start)  = info_player_terrorist :
 [
 ]
 
-@SolidClass model("models/editor/playerstart.vmdl")
+@SolidClass model("models/characters/combine_grunt/combine_grunt.vmdl")
 
 	metadata
 	{
