@@ -14,6 +14,8 @@ Currently Includes
 | func_buyzone  |  Fully Functional
 | func_bomb_target |  Fully Functional
 
+And to top it all off, a test map with developer notes!
+
 NOTE: The map will by default load into Deathmatch if a Bomb Site is not in the map.
 
 I will take feedback as I develop this.
