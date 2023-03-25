@@ -12,6 +12,6 @@ Currently Includes
 | info_player_terrorist | Fully Functional
 | info_player_counterterrorist  | Fully Functional
 | func_buyzone  |  Fully Functional
-| func_bomb_target |  Not Yet Tested
+| func_bomb_target |  Fully Functional
 
 I will take feedback as I develop this.
