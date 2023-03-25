@@ -6,8 +6,11 @@ To use, Add the FGD files to the "game/hlvr" folder in your Alyx directory. When
 Very Basic at the moment. These things... They take time.
 
 Currently Includes
-T and CT Spawns
-Buy Zones
-Bomb Sites (Not Tested)
+
+| Entity       | Condition      |
+| ----------- | ----------- | 
+| CT and T Spawns  | Fully Functional
+| Buy Zones  |  Fully Functional
+| Bomb Sites  |  Not Yet Tested
 
 I will take feedback as I develop this.
