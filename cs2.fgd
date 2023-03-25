@@ -22,7 +22,7 @@
 [
 ]
 
-@SolidClass 
+@SolidClass model("models/editor/playerstart.vmdl")
 
 	metadata
 	{
@@ -36,7 +36,7 @@ base(info_player_start)  = info_player_terrorist :
 [
 ]
 
-@SolidClass 
+@SolidClass model("models/editor/playerstart.vmdl")
 
 	metadata
 	{
