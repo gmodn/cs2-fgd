@@ -7,7 +7,9 @@
 
 
 @SolidClass base(Trigger)  = func_buyzone :
-	"Buy Zone for CS2"
+	"Buy Zone. Players can buy equipment while standing in this zone, if the zone matches their current team.\n\n" +
+	"A single Buy Zone entity must be either terrorist or counter-terrorist, it cannot be both. Should have " +
+	"the toolstrigger material applied to all sides"
 [
 	teamnum(choices) : "Who can buy from here?" : "0" =
 	[
@@ -16,11 +18,35 @@
 		"2" : "Terrorist"
 		"3" : "Counter-Terrorist"
 	]
+
+	input TouchTest(void) : "Tests if the trigger is being touched and fires an output based on whether the value is true or false."
+
+	input SetTeam_TerroristOnly(void) : "Make it so only terrorist can buy from this buyzone."
+	input SetTeam_CTOnly(void) : "Make it so only CT's can buy from this buyzone."
+	input SetTeam_AllTeams(void) : "Make it so all teams can buy from this buyzone."
+	input SetTeam_None(void) : "Make it so no teams can buy from this buyzone (this essentially disables the buyzone)."
+
+	output OnTouching(void) : "Fired when the TestTouch input is true (something is touching the trigger.)"
+	output OnNotTouching(void) : "Fired when the TestTouch input is not true (nothing is touching the trigger.)"
 ]
 
 @SolidClass base(Trigger)  = func_bomb_target :
-	"Bomb Zone for CS2"
+	"Bomb Target. The terrorists can place C4 explosives while standing in this zone.\n\n" +
+	"When the bomb is planted and explodes inside this area, the BombExplode outputs are fired. The game handles " +
+	"all of the bomb planting and scoring logic – the BombExplode outputs are provided to add visual and damage effects."
 [
+	input TouchTest(void) : "Tests if the trigger is being touched and fires an output based on whether the value is true or false." 
+	input BombExplode(void): "Fires the BombExplode output"
+	input BombPlanted(void): "Fires the BombPlanted output and removes this entity's volume from the planting zones until next round"
+	input BombDefused(void): "Fires the BombDefused output"
+	
+	output OnTouching(void) : "Fired when the TestTouch input is true (something is touching the trigger.)"
+	output OnNotTouching(void) : "Fired when the TestTouch input is not true (nothing is touching the trigger.)"
+	output BombExplode(void): "Fires when C4 explodes or if the BombExplode input is received"
+	output BombPlanted(void): "Fires when a C4 is planted or if the BombPlanted input is received"
+	output BombDefused(void): "Fires when a C4 is defused or if the BombDefused input is received; Bug: Is not fired by normal gameplay, only with the BombDefused input."
+
+	bomb_mount_target(target_destination) : "Bomb Mount Target" 
 ]
 
 @SolidClass model("models/player.vmdl")
