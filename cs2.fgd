@@ -65,7 +65,7 @@ base(info_player_start)  = info_player_terrorist :
 [
 ]
 
-@SolidClass model("models/player.vmdl")
+@SolidClass model("models/props/choreo_office/gnome.vmdl")
 
 	metadata
 	{
