@@ -7,12 +7,13 @@ Very Basic at the moment. These things... They take time.
 
 Currently Includes
 
-| Entity       | Condition      |
-| ----------- | ----------- | 
-| info_player_terrorist | Fully Functional
-| info_player_counterterrorist  | Fully Functional
-| func_buyzone  |  Fully Functional
-| func_bomb_target |  Fully Functional
+| Entity                        | Condition      
+| -----------                   | -----------    
+| info_player_terrorist         |  Fully Functional
+| info_player_counterterrorist  |  Fully Functional
+| func_buyzone                  |  Fully Functional
+| func_bomb_target              |  Fully Functional
+| chicken                       |  Fully Functional
 
 And to top it all off, a test map with developer notes!
 
