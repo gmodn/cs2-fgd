@@ -11,14 +11,7 @@
 	"A single Buy Zone entity must be either terrorist or counter-terrorist, it cannot be both. Should have " +
 	"the toolstrigger material applied to all sides"
 [
-	teamnum(choices) : "Who can buy from here?" : "0" =
-	[
-		"-1" : "No one"
-		"0" : "Everyone"
-		"2" : "Terrorist"
-		"3" : "Counter-Terrorist"
-	]
-
+	
 	input TouchTest(void) : "Tests if the trigger is being touched and fires an output based on whether the value is true or false."
 
 	input SetTeam_TerroristOnly(void) : "Make it so only terrorist can buy from this buyzone."
@@ -28,6 +21,15 @@
 
 	output OnTouching(void) : "Fired when the TestTouch input is true (something is touching the trigger.)"
 	output OnNotTouching(void) : "Fired when the TestTouch input is not true (nothing is touching the trigger.)"
+
+	teamnum(choices) : "Who can buy from here?" : "0" =
+	[
+		"-1" : "No one"
+		"0" : "Everyone"
+		"1" : "Spectator"
+		"2" : "Terrorist"
+		"3" : "Counter-Terrorist"
+	]
 ]
 
 @SolidClass base(Trigger)  = func_bomb_target :
@@ -60,6 +62,20 @@
 
 base(info_player_start)  = info_player_terrorist :
 	"Spawn for the Terrorist in CS2"
+[
+]
+
+@SolidClass model("models/player.vmdl")
+
+	metadata
+	{
+		entity_tool_name = "Chicken"
+		entity_tool_group = "Counter-Strike 2"
+		entity_tool_tip = "Chicken in CS2"
+	}
+
+base(info_player_start)  = chicken :
+	"Chicken in CS2"
 [
 ]
 
