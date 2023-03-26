@@ -1,5 +1,7 @@
 # Counter-Strike 2 FGD
-A WIP FGD for CS2 (For use in Half-Life: Alyx Hammer)
+A WIP FGD for CS2.
+
+NOTE: This version is for the Half-Life: Alyx tools. If you don't have HLA, there is a SteamVR Home Version here: https://github.com/Gman-HLA-sbox-modder/cs2-fgd/tree/steamvr-tool-ver
 
 To use, Add the FGD files to the "game/hlvr" folder in your Alyx directory. When it asks to replace the hlvr.fgd file, do it.
 
