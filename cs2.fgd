@@ -2,9 +2,6 @@
 // This is all of the Counter-Strike 2 shit.
 //
 
-// This allows the entities to show up in the Tool Properties section of hammer.
-@EntityGroup "Counter-Strike 2"
-
 
 @SolidClass base(Trigger)  = func_buyzone :
 	"Buy Zone. Players can buy equipment while standing in this zone, if the zone matches their current team.\n\n" +
@@ -51,44 +48,17 @@
 	bomb_mount_target(target_destination) : "Bomb Mount Target" 
 ]
 
-@SolidClass model("models/player.vmdl")
-
-	metadata
-	{
-		entity_tool_name = "Terrorist Spawn"
-		entity_tool_group = "Counter-Strike 2"
-		entity_tool_tip = "Spawn for the Terrorist in CS2"
-	}
-
-base(info_player_start)  = info_player_terrorist :
+@SolidClass model("models/editor/playerstart.vmdl") base(info_player_start)  = info_player_terrorist :
 	"Spawn for the Terrorist in CS2"
 [
 ]
 
-@SolidClass model("models/props/choreo_office/gnome.vmdl")
-
-	metadata
-	{
-		entity_tool_name = "Chicken"
-		entity_tool_group = "Counter-Strike 2"
-		entity_tool_tip = "Chicken in CS2"
-	}
-
-base(info_player_start)  = chicken :
+@SolidClass model("models/props/hats/chicken_hat.vmdl") base(info_player_start)  = chicken :
 	"Chicken in CS2"
 [
 ]
 
-@SolidClass model("models/characters/combine_grunt/combine_grunt.vmdl")
-
-	metadata
-	{
-		entity_tool_name = "Counter-Terrorist Spawn"
-		entity_tool_group = "Counter-Strike 2"
-		entity_tool_tip = "Spawn for the Counter-Terrorist in CS2"
-	}
-
-base(info_player_start)  = info_player_counterterrorist :
+@SolidClass model("models/editor/playerstart.vmdl") base(info_player_start)  = info_player_counterterrorist :
 	"Spawn for the Counter-Terrorist in CS2"
 [
 ]
