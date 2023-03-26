@@ -1,5 +1,5 @@
 # Counter-Strike 2 FGD
-A WIP FGD for CS2 (For use in Half-Life: Alyx Hammer)
+A WIP FGD for CS2 (This is the experimental SteamVR tools version. Please note that this is not guaranteed to work.)
 
 To use, Add the FGD files to the "yoursteamdir\SteamVR\tools\steamvr_environments\game\steamtours". When it asks to replace the steamtours.fgd file, do it.
 
